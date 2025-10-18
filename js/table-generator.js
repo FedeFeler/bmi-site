@@ -27,7 +27,17 @@ for (let i = 0; i <= 21; i++) {
   const thOriginal = document.getElementsByClassName("heights");
   const th = document.createElement("th");
   th.classList.add("weight");
-  th.innerHTML = `${120 + i * 10} <br> ${((120 + i * 10) * 0.453).toFixed(1)}`
+  th.innerHTML = `${120 + i * 10} <br> <span class="weights-in-kg">${((120 + i * 10) * 0.453).toFixed(1)}</span>`;
   thOriginal[0].insertAdjacentElement("beforeend", th);
+}
+
+const heightTr = document.getElementsByClassName("height-tr");
+  
+  
+for (let i = 0; i < heightTr.length; i++) {
+  const empty = document.createElement("td");
+  empty.classList.add("empty");
+  empty.textContent = "";
+  heightTr[i].appendChild(empty);
 }
 
