@@ -5,6 +5,7 @@ for (let i = 0; i <= 19; i++ ) {
   tr.classList.add("height-tr");
   const th1 = document.createElement("th");
   const th2 = document.createElement("th");
+  th2.classList.add("height");
   
   if (i < 6) {
     th1.textContent = `6'${5 - i}"`;
@@ -29,3 +30,4 @@ for (let i = 0; i <= 21; i++) {
   th.innerHTML = `${120 + i * 10} <br> ${((120 + i * 10) * 0.453).toFixed(1)}`
   thOriginal[0].insertAdjacentElement("beforeend", th);
 }
+
