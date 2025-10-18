@@ -32,12 +32,23 @@ for (let i = 0; i <= 21; i++) {
 }
 
 const heightTr = document.getElementsByClassName("height-tr");
-  
-  
+const weightKg = document.getElementsByClassName("weights-in-kg");
+const heightInCm = document.getElementsByClassName("height"); 
+const weight = document.getElementsByClassName("weight");
+const weightArr = Array.from(weightKg);
+const heightArr = Array.from(heightInCm);
+
 for (let i = 0; i < heightTr.length; i++) {
-  const empty = document.createElement("td");
-  empty.classList.add("empty");
-  empty.textContent = "";
-  heightTr[i].appendChild(empty);
+const empty = document.createElement("td");
+empty.classList.add("empty");
+empty.textContent = "";
+heightTr[i].appendChild(empty);
 }
 
+weightArr.forEach((w, wIndex) => {for (let i = 0; i < heightTr.length; i++) {
+  const td = document.createElement("td");
+  td.classList.add("bmi");
+  td.textContent = `${(Number(w.textContent) / ((Number(heightInCm[i].textContent) / 100) ** 2)).toFixed(1)}`;
+  heightTr[i].appendChild(td);
+}
+  });
