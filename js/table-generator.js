@@ -45,7 +45,7 @@ empty.textContent = "";
 heightTr[i].appendChild(empty);
 }
 
-weightArr.forEach((w, wIndex) => {for (let i = 0; i < heightTr.length; i++) {
+weightArr.forEach((w) => {for (let i = 0; i < heightTr.length; i++) {
   const td = document.createElement("td");
   td.classList.add("bmi");
   td.textContent = `${(Number(w.textContent) / ((Number(heightInCm[i].textContent) / 100) ** 2)).toFixed(1)}`;
