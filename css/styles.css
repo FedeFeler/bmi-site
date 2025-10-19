@@ -18,4 +18,9 @@ td {
 
 .empty {
   border: none;
+  border-bottom: 2px solid grey;
+}
+
+th {
+  background-color: rgb(224, 224, 224);
 }
