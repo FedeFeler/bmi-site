@@ -52,3 +52,21 @@ weightArr.forEach((w) => {for (let i = 0; i < heightTr.length; i++) {
   heightTr[i].appendChild(td);
 }
   });
+
+const bmi = document.getElementsByClassName("bmi");
+const bmiArr = Array.from(bmi);
+
+bmiArr.forEach(item => {
+  if (Number(item.textContent) < 18.5) {
+    item.style.backgroundColor = "rgb(38, 255, 242)";
+  }
+  else if (Number(item.textContent) >= 18.5 && Number(item.textContent) < 25) {
+    item.style.backgroundColor = "rgba(65, 247, 86, 1)";
+  } else if (Number(item.textContent) >= 25 && Number(item.textContent < 30)) {
+    item.style.backgroundColor = "rgb(244, 255, 38)";
+  } else if (Number(item.textContent) >= 30 && Number(item.textContent < 40)) {
+    item.style.backgroundColor = "rgb(255, 143, 11)";
+  } else {
+    item.style.backgroundColor = "rgb(255, 11, 11)";
+  }
+})
