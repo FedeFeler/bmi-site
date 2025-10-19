@@ -38,12 +38,11 @@ const weight = document.getElementsByClassName("weight");
 const weightArr = Array.from(weightKg);
 const heightArr = Array.from(heightInCm);
 
-for (let i = 0; i < heightTr.length; i++) {
 const empty = document.createElement("td");
 empty.classList.add("empty");
 empty.textContent = "";
-heightTr[i].appendChild(empty);
-}
+empty.rowSpan = 22;
+heightTr[0].appendChild(empty);
 
 weightArr.forEach((w) => {for (let i = 0; i < heightTr.length; i++) {
   const td = document.createElement("td");
